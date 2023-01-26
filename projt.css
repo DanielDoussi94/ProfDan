@@ -1,0 +1,598 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+:root{
+    --grayColor:#dfdbdb;
+    --blueColor:#0065FC;
+    --skyBlueColor: #DEEBFF;
+}
+html{
+    scroll-behavior: smooth;
+}
+.container{
+    width: 80%;
+    margin: auto;
+    
+}
+a {
+     text-decoration: none;
+     color: inherit;
+}
+h3{
+    padding-bottom: 20px;
+}
+h4{
+    font-size: 12px;
+    padding: 4px 0;
+}
+/* Gestion de l'entete */
+header{
+    width: 100%;
+    min-height: 90px;
+    padding-top: 30px;
+}
+header .entete{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.imag{
+    width: 30%;
+}
+
+.imag img{
+    height: 50px;
+    object-fit: cover;
+}
+
+
+.go ul {
+    display: flex;
+}
+.go ul li {    
+    list-style: none;
+    margin-left: 50px;
+}
+
+.go a{
+    color: #828181;
+    text-transform:capitalize;
+    font-size: 20px;
+    padding: 30px 30px 0 30px;
+}
+.go a:hover{
+    color: var(--blueColor);
+    border-top: 1px  solid var(--blueColor);
+}
+
+
+/* La mise en forme de la partie de recherche d'hébergement */
+.find-hebergement{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.find-hebergement > div h1{
+    font-size: 20px;
+}
+.small{
+    color: #828181;
+    font-size: 12px;
+    padding: 4px 0;
+}
+.find-hebergement form{
+    border:  1px solid var(--grayColor);
+    width: 350px;
+    height: 40px;   
+    border-radius: 10px;
+    margin: 10px 0;
+}
+.find-hebergement form input, .find-hebergement form input:focus{
+    border: none;
+    height: 100%;
+    width: 200px;
+    padding-left: 10px;
+}
+.find-hebergement form .map{
+    background-color: var(--grayColor);
+    display: inline-block;
+    width: 40px;
+    height: 100%;
+    line-height: 40px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    text-align: center;
+}
+.find-hebergement form  button{
+    border: none;
+    height: 100%;
+    width: auto;
+    background-color: var(--blueColor);
+    color: white;
+    padding: 0 10px;
+    float: right;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.find-hebergement form button i {
+    display: none;
+}
+.filters{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.filters h6{
+    font-weight: bold;
+    font-size: 18px;
+    width: 15%;
+}
+.filter-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    width:80%;
+    margin-right: 150px;
+    font-weight: bold;
+}
+.filter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+    height: 40px;
+    border: 1px solid var(--grayColor) ;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.filter:hover{
+    background-color: var(--skyBlueColor);
+}
+.filter p{
+    padding: 0 10px;
+    font-size: 10px;
+}
+.filter span{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    padding-left: 5px;
+    color: var(--blueColor);
+}
+.small i {
+    color: var(--blueColor);
+}
+
+/* La mise en forme de la partie des chambres d'hébergement */
+
+.hebergement{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.hebergement .room-list{
+width: 65%;
+    background-color: var(--grayColor);
+    padding: 20px;
+    border-radius: 10px;
+}
+.hebergement .popular-rooms{
+    width: 32%;
+    background-color: var(--grayColor);
+    padding: 20px;
+    border-radius: 10px;
+}
+/* Mise en forme des cards */
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items:flex-start ;
+}
+.card{
+    width: 189px;
+    background: #fff;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.card img{
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+.card .card-body{
+    padding: 10px;
+    width: 100%;
+    padding-top: 0;
+}
+.card .card-body p{
+    padding: 2px 0;
+}
+.card-body i {
+    color: var(--grayColor);
+}
+.card-body i.star-blue{
+    color: var(--blueColor);
+}
+
+/* Les chambres les populaires */
+.rooms{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.room{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 130px;
+    background: #fff;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.room img{
+    width: 100px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 0 0 20px;
+}
+.room-body{
+    padding: 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.room-body i {
+    color: var(--grayColor)
+}
+.room-body i.star-blue{
+    color:var(--blueColor)
+}
+.popular-rooms h3{
+    display: flex;
+    justify-content: space-between;align-items: center;
+}
+.popular-rooms h3 i {
+    color: var(--blueColor);
+}
+
+
+/* Activité à Marseille */
+
+.marseilles{
+    width: 100%;
+    margin-top: 40px;
+}
+.marseilles h2{
+    font-size: 18px;
+    margin-left: 5px;
+    
+}
+.port{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+
+.mars1{
+    margin-top: 20px;
+    width: 23%;
+    background-color: rgb(255, 252, 252);
+    border-radius: 10px;
+    box-shadow: 3px 4px 4px rgb(214, 213, 213);
+    cursor: pointer;
+}
+.mars1 img{
+    object-fit: cover;
+    height: 385px;
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.mars1 p {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+/* Le footer */
+footer{
+    width: 100%;
+    height: 180px;
+    margin-top: 40px;
+    background-color: rgb(238, 236, 236);
+}
+.cont {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+
+.cont .propos h3{
+    color: black;
+    margin-top: 20px;
+}
+.cont .propos ul{
+    list-style: none;
+}
+.cont .propos ul li a{
+    display: flex;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    color: black;
+    font-size: 16px;
+}
+
+/* Version tablette (768px - 992px) */
+@media screen and (max-width: 992px){
+    .filter p{
+        font-size: 10px;
+    }
+    .hebergement{
+        display: block;
+        width: 100%;
+    }
+    .hebergement .room-list{
+        width: 100%;
+        margin-bottom: 50px;
+        background-color: #f2f2f2;
+    }
+    .card{
+        width: 30%;
+    }
+    .hebergement .popular-rooms {
+        width: 100%;
+    }
+    .rooms{
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .room{
+        background-color: #fff;
+        width: 32%;
+        height: 125px;
+        padding: 3px;
+        border-radius: 20px;
+    }
+    .room img{
+        width: 80px;
+        height: 100%;
+    }
+    .room-body{
+        padding: 10px;
+    }
+    .room-body h4{
+        font-size: 12px;
+    }
+    i.fa-star{
+        font-size: 10px;
+    }
+    footer .cont{
+        font-size: 12px;
+    }
+
+}
+/* Version mobile (320px 768px)*/
+@media screen and (max-width:768px) {
+
+    header{
+        padding-top: 10px;
+        font-size: 16px;
+    }
+    header .entete{
+        width: 100%;
+        display: block;
+        padding: 0;
+        text-align: center;
+    }
+    .imag{
+        width: 100%;
+    }
+
+    header .go{
+        border-top: 0;
+        border-bottom: 2px solid var(--grayColor);
+        width: 125%;
+        margin: 0 -40px;
+    }
+    
+    .go ul {
+        justify-content: space-between;
+        width: 100%;
+    }
+    .go ul li {    
+        margin-left: 0px;
+    }
+   
+    
+    .go li{
+        padding: 0 20px 20px 0 !important;
+    }
+    .go li:hover{
+        
+        border-bottom: 2px  solid var(--blueColor);
+    }
+    
+    .go a:hover{
+        border-top: none;
+    }
+
+    .find-hebergement{
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+    .find-hebergement form {
+        width: 100%;
+        overflow-y: hidden;
+    }
+    .find-hebergement form .map{
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+    .find-hebergement form input,.find-hebergement form input:focus{
+        width: 150px;
+        padding-left: 10px;
+    }
+    .find-hebergement form button span{
+        display: none;
+    }
+    .find-hebergement form button i {
+        display: block;
+    }
+
+    .filters{
+        display: block;
+        text-align: left;
+    }
+    .filter-list{
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .filter{
+        justify-content: flex-start;
+        align-items: center;
+        border: 3px solid var(--grayColor);
+        margin-bottom: 20px;
+        margin-left: 0;
+        padding: 20px 5px;
+        width: 48%;
+    }
+    .filetr p {
+        font-size: 8px;
+        padding: 0;
+    }
+    .hebergement{
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .hebergement .room-list{
+        width: 100%;
+        background-color: #fff;
+        margin-top: 20px;
+        padding: 0;
+    }
+    .cards{
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+    }
+    .card{
+        width: 100%;
+        box-shadow: 4px 4px 6px var(--grayColor),-4px -4px 6px var(--grayColor);
+    }
+    .card img{
+        width: 100%;
+        height: 100px;
+        border-radius: 20px 20px 0 0;
+    }
+    .hebergement .popular-rooms{
+        padding: 10px;
+    }
+    .popular-rooms{
+        width: 100%;
+        justify-content: center;
+    } 
+    .rooms{
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+    }
+    .room{
+        width: 100%;
+        display: flex;
+        justify-content: start;
+    }
+    .room-body{
+        padding: 10px 20px;
+    }
+    .room-body h4, .room-body p.small{
+        font-size: 14px;
+    }
+    i.fa-start{
+        font-size: 10px;
+    }
+
+    .marseilles{
+        width: 100%;
+        justify-content: center;
+    }
+    .marseilles h2{
+        margin-top: 20px;
+        align-items: center;
+    }
+    .port{
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .mars1{
+        width: 100%;
+        padding-bottom: 10px;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow:  4px 4px 6px var(--grayColor),-4px -4px 6px var(--grayColor);
+    }
+    .mars1 img{
+        width: 100%;
+        height: 100px;
+    }
+    .mars1 p{
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    footer{
+        width: 100%;
+        justify-content: center;
+        
+    }
+     .cont{
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+        background-color: rgb(238, 236, 236);
+        width: 100%;
+        margin: 0;
+        padding-left: 20px;
+    }
+    footer .cont h3{
+        width: 100%;
+
+    }
+    
+}
